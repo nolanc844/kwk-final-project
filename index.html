@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title</title>
+    <!--aframe-->
+    <script src="script.js"></script>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-entity>
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
+        </a-entity>
+        <!--start page-->
+        <a-sky id="background" src=""></a-sky>
+        <a-assets>
+            <video id="NewZealandBeaches" autoplay loop="true" src="new_zealand.mp4"></video>
+            <video id="YellowStone" autoplay loop="true" src="YellowStone.mp4"></video>
+            <video id="MountRush" autoplay loop="true" src="?"></video>
+            <video id="music" autoplay loop="true" src="?"></video>
+            <img src="HanolaCave.jpg" id="Hanola">
+            <img src="petra.jpg" id="Petra">
+            <img src="yellowstone.jpg" id="Yellowstone">
+        </a-assets>
+        <a-videosphere visible =true onclick="changeToBeach()" id="sphere1" src="#NewZealandBeaches" radius="5" position="-7 0 -10"></a-videosphere>
+        <a-videosphere visible=true onclick="changeToParks()" id="sphere2" src="#YellowStone" radius="5" position="7 0 -10"></a-videosphere>
+        <a-videosphere visible=true onclick="changeToMonuments()" id="sphere3" src="#MountRush" radius="5" position="0 10 -10"></a-videosphere>
+        <a-videosphere visible =true onclick="changeToBeach()" id="sphere1" src="#music" radius="1" position="-7 0 -2000"></a-videosphere>
+
+    </a-scene>
+</body>
+</html>
